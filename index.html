@@ -24,7 +24,7 @@
 								<div class="col-md-5 center-item">
 									<div class="input-group number-spinner">
 										<button class="btn btn-default" onclick="handleProductPrice('phone',false)"><i class="fas fa-minus"></i></button>
-										<input type="text" class="form-control text-center" value="1" id="phone-count" />
+										<input disabled type="text" class="form-control text-center" value="0" id="phone-count" />
 										<button class="btn btn-default" onclick="handleProductPrice('phone',true)"><i class="fas fa-plus"></i></button>
 									</div>
 									<h5 id="phone-total">$1219</h5>
@@ -42,7 +42,7 @@
 								<div class="col-md-5 center-item">
 									<div class="input-group number-spinner">
 										<button class="btn btn-default" onclick="handleProductPrice('case',false)"><i class="fas fa-minus"></i></button>
-										<input id="case-count" type="text" class="form-control text-center" value="1" />
+										<input disabled id="case-count" type="text" class="form-control text-center" value="0" />
 										<button class="btn btn-default" onclick="handleProductPrice('case',true)"><i class="fas fa-plus"></i></button>
 									</div>
 									<h5 id="case-total">$59</h5>
@@ -60,9 +60,9 @@
 								</div>
 
 								<div class="col-md-4 status">
-									<h5>$1,278</h5>
-									<h5>$0</h5>
-									<h5>$1,278</h5>
+									<h5 id="totalPrice">$0</h5>
+									<h5 id="total-tax">$0</h5>
+									<h5 id="grand-total">$0</h5>
 								</div>
 							</div>
 						</div>
