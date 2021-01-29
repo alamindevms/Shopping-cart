@@ -23,11 +23,11 @@
 
 								<div class="col-md-5 center-item">
 									<div class="input-group number-spinner">
-										<button class="btn btn-default" id="remove"><i class="fas fa-minus"></i></button>
-										<input type="text" class="form-control text-center" value="1" id="price" />
-										<button class="btn btn-default" id="add"><i class="fas fa-plus"></i></button>
+										<button class="btn btn-default" onclick="handleProductPrice('phone',false)"><i class="fas fa-minus"></i></button>
+										<input type="text" class="form-control text-center" value="1" id="phone-count" />
+										<button class="btn btn-default" onclick="handleProductPrice('phone',true)"><i class="fas fa-plus"></i></button>
 									</div>
-									<h5 id="totalPrice">$1219</h5>
+									<h5 id="phone-total">$1219</h5>
 									<img src="images/remove.png" alt="" class="remove-item" />
 								</div>
 							</div>
@@ -41,9 +41,9 @@
 								</div>
 								<div class="col-md-5 center-item">
 									<div class="input-group number-spinner">
-										<button id="case-remove" class="btn btn-default"><i class="fas fa-minus"></i></button>
-										<input id="case-input" type="text" class="form-control text-center" value="1" />
-										<button id="case-add" class="btn btn-default"><i class="fas fa-plus"></i></button>
+										<button class="btn btn-default" onclick="handleProductPrice('case',false)"><i class="fas fa-minus"></i></button>
+										<input id="case-count" type="text" class="form-control text-center" value="1" />
+										<button class="btn btn-default" onclick="handleProductPrice('case',true)"><i class="fas fa-plus"></i></button>
 									</div>
 									<h5 id="case-total">$59</h5>
 									<img src="images/remove.png" alt="" class="remove-item" />
