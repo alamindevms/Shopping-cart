@@ -1,7 +1,12 @@
-// get add button
+// Phone
 const addBtn = document.getElementById('add');
 const removeBtn = document.getElementById('remove');
+// Case 
+let caseRemove = document.getElementById('case-remove');
+let caseAdd = document.getElementById('case-add');
 
+caseAdd.addEventListener('click', caseAddFunc);
+caseRemove.addEventListener('click', caseRemoveFunc);
 // eventListener
 addBtn.addEventListener('click', addPrice);
 removeBtn.addEventListener('click', removeBtnPrice);
@@ -30,31 +35,28 @@ function handleProductPrice(isIncrease) {
    document.getElementById('totalPrice').innerText = '$' + totalPrice;
 }
 
-// Case 
-let caseRemove = document.getElementById('case-remove');
-let caseAdd = document.getElementById('case-add');
 
-caseAdd.addEventListener('click', caseAddFunc);
-caseRemove.addEventListener('click', caseRemoveFunc);
 
 function caseAddFunc() {
-   let caseInput = document.getElementById('case-input');
-   let caseValue = parseInt(caseInput.value);
-   let updateValue = caseValue + 1;
-   caseInput.value = updateValue;
-
-   let caseTotal = updateValue * 59;
-   document.getElementById('case-total').innerText = '$' + caseTotal;
-
+   caseHandaler(true)
 }
 
 function caseRemoveFunc() {
+   caseHandaler(false)
+}
+
+function caseHandaler(isIncrease) {
    let caseInput = document.getElementById('case-input');
    let caseValue = parseInt(caseInput.value);
-   let updateValue = caseValue - 1;
+   let updateValue = caseValue;
+   if (isIncrease == true) {
+      updateValue = caseValue + 1;
+   }
+   if (isIncrease == false && caseValue > 0) {
+      updateValue = caseValue - 1;
+   }
    caseInput.value = updateValue;
 
    let caseTotal = updateValue * 59;
    document.getElementById('case-total').innerText = '$' + caseTotal;
-
 }
